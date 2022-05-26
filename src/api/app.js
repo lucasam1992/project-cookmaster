@@ -33,6 +33,7 @@ app.get('/recipes', recipeController.getAll);
 app.get('/recipes/:id', recipeController.getById);
 
 app.post('/users', usersController.create);
+app.post('/users/admin', validateWebToken, usersController.createAdmin);
 app.post('/login', loginController.logIn);
 app.post('/recipes', validateWebToken, recipeController.create);
 
