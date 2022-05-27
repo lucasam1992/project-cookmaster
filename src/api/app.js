@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const multer = require('multer');
+// const multer = require('multer');
 const usersController = require('../controllers/usersController');
 const loginController = require('../controllers/loginController');
 const recipeController = require('../controllers/recipesController');
 const validateWebToken = require('./auth/validateToken');
+const imageUpload = require('../middlewares/imageUpload');
 
 const app = express();
 app.use(bodyParser.json());
@@ -17,6 +18,7 @@ app.get('/', (request, response) => {
 });
 
 // fazendo multer
+/*
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
     callback(null, 'src/uploads');
@@ -28,6 +30,7 @@ const storage = multer.diskStorage({
 });
 // multer recebe o objeto q contem o destino do arquivo enviado
 const upload = multer({ storage });
+*/
 
 app.get('/recipes', recipeController.getAll);
 app.get('/recipes/:id', recipeController.getById);
@@ -39,7 +42,8 @@ app.post('/recipes', validateWebToken, recipeController.create);
 
 app.put('/recipes/:id', validateWebToken, recipeController.update);
 app.put('/recipes/:id/image', validateWebToken, 
-          upload.single('image'), recipeController.imageAdded);
+                              imageUpload.single('image'),
+                              recipeController.imageAdded);
 
 app.delete('/recipes/:id', validateWebToken, recipeController.exclude);
 
