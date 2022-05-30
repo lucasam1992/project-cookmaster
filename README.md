@@ -76,57 +76,7 @@ A tabela `recipes` contém os seguintes atributos: <br />
 
 ![Foto Autenticada](./public/imagemrecetornada.png)
 
-### 11 - Crie testes de integração que cubram no mínimo 30% dos arquivos em `src`, com um mínimo de 50 linhas cobertas
-
-- Os testes de integração devem ser criados na pasta `./src/integration-tests`, essa pasta **não pode ser renomeada ou removida**;
-
-- O arquivo `change.me.test.js` pode ser alterado, renomeado ou removido;
-
-- Os testes devem ser criados usando o instrumental e boas práticas apresentado nos conteúdos de testes do course;
-
-- Para rodar os testes, utilize o comando `npm run dev:test`;
-
-- Para visualizar a cobertura, utilize o comando `npm run dev:test:coverage`;
-
-**Além disso, as seguintes verificações serão feitas:**
-
-- **[Será validado que o teste cobre o valor esperado]**
-
-Nenhum teste pode ser pulado;
-O resultado do percentual total de cobertura deve ser igual ou maior que `30`;
-O resultado do numero total de linhas cobertas deve ser igual ou maior que `50`.
-
-## Requisitos Bônus
-
-### 12 - Crie um endpoint para cadastro de pessoas administradoras
-
-- A rota deve ser (`/users/admin`).
-
-- Só será possível adicionar um admin caso esta ação esteja sendo feita por outro admin, portanto, deve ser validado se há um admin logado.
-
-- Por padrão, as requisições pra esse endpoint devem adicionar um usuário com a role _admin_.
-
-- O corpo da requisição deve ter o seguinte formato:
-
-  ```json
-  {
-    "name": "string",
-    "email": "string",
-    "password": "string"
-  }
-  ```
-
-**Além disso, as seguintes verificações serão feitas:**
-
-- **[Será validado que não é possível cadastrar um usuário admin, sem estar autenticado como um usuário admin]**
-
-Se o usuário admin não é criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `403`:
-
-![Criar usuário sem ser admin](./public/soadmincria.png)
-
-- **[Será validado que é possível cadastrar um usuário admin]**
-
-Se o usuário admin é criado com sucesso o resultado retornado deverá ser conforme exibido abaixo, com um status http `201`:
+### 11 - Criação do endpoint POST `/users/admin` 
 
 ![Criar admin](./public/criaradmin.png)
 
