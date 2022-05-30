@@ -80,76 +80,19 @@ A tabela `recipes` contém os seguintes atributos: <br />
 
 ![Criar admin](./public/criaradmin.png)
 
-### 13 - Crie testes de integração que cubram no mínimo 60% dos arquivos em `src`, com um mínimo de 100 linhas cobertas
+## Criação de Testes
 
-- Os testes de integração devem ser criados na pasta `./src/integration-tests`, essa pasta **não pode ser renomeada ou removida**;
+- Os testes de integração serão desenvolvidos no diretório `./src/integration-tests`
 
-- O arquivo `change.me.test.js` pode ser alterado, renomeado ou removido;
+## Rodando o Projeto Localmente
 
-- Os testes devem ser criados usando o instrumental e boas práticas apresentado nos conteúdos de testes do course;
+1° `git clone https://github.com/lucasam1992/project-cookmaster.git` - CLone o repositório para sua máquina <br />
+2° `cd project-cookmaster` - Entre na pasta do repositório clonado <br />
+3° `npm install` - Instale as dependências <br />
+4° `npm start` - Execute o programa <br />
 
-- Para rodar os testes, utilize o comando `npm run dev:test`;
+**Sugestão: Baixe o programa Insomina para executar cada operação do CRUD: https://snapcraft.io/install/insomnia/ubuntu
 
-- Para visualizar a cobertura, utilize o comando `npm run dev:test:coverage`;
+## Autor
 
-**Além disso, as seguintes verificações serão feitas:**
-
-- **[Será validado que o teste cobre o valor esperado]**
-
-Nenhum teste pode ser pulado;
-O resultado do percentual total de cobertura deve ser igual ou maior que `60`;
-O resultado do numero total de linhas cobertas deve ser igual ou maior que `100`.
-
-### 14 - Crie testes de integração que cubram no mínimo 90% dos arquivos em `src`, com um mínimo de 150 linhas cobertas
-
-- Os testes de integração devem ser criados na pasta `./src/integration-tests`, essa pasta **não pode ser renomeada ou removida**;
-
-- O arquivo `change.me.test.js` pode ser alterado, renomeado ou removido;
-
-- Os testes devem ser criados usando o instrumental e boas práticas apresentado nos conteúdos de testes do course;
-
-- Para rodar os testes, utilize o comando `npm run dev:test`;
-
-- Para visualizar a cobertura, utilize o comando `npm run dev:test:coverage`;
-
-**Além disso, as seguintes verificações serão feitas:**
-
-- **[Será validado que o teste cobre o valor esperado]**
-
-Nenhum teste pode ser pulado;
-O resultado do percentual total de cobertura deve ser igual ou maior que `90`;
-O resultado do numero total de linhas cobertas deve ser igual ou maior que `150`.
-
----
-
-## Depois de terminar o desenvolvimento (opcional)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
----
-
-# Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV
-
----
-
-# Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://bit.ly/39qMu3s)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+- Lucas Machado
