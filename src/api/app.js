@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const usersController = require('../controllers/usersController');
 const loginController = require('../controllers/loginController');
 const recipeController = require('../controllers/recipesController');
-const validateWebToken = require('./auth/validateToken');
+const validateWebToken = require('../middlewares/validateToken');
 const imageUpload = require('../middlewares/imageUpload');
 
 const app = express();
