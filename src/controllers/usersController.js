@@ -18,13 +18,6 @@ const create = rescue(async (req, res) => {
 
 const createAdmin = rescue(async (req, res) => {
     const { name, email, password } = req.body;
-    const { role } = req.payload; 
-
-    // console.log(req);
-
-    if (role !== 'admin') {
-        return res.status(403).json({ message: 'Only admins can register new admins' });
-    }
 
     const user = await usersService.createAdmin(name, email, password);
 

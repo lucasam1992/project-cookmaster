@@ -4,6 +4,7 @@ const usersController = require('../controllers/usersController');
 const loginController = require('../controllers/loginController');
 const recipeController = require('../controllers/recipesController');
 const validateWebToken = require('../middlewares/validateToken');
+const validateRoleAdmin = require('../middlewares/validateRoleAdmin');
 const imageUpload = require('../middlewares/imageUpload');
 
 const app = express();
@@ -20,7 +21,7 @@ app.get('/recipes', recipeController.getAll);
 app.get('/recipes/:id', recipeController.getById);
 
 app.post('/users', usersController.create);
-app.post('/users/admin', validateWebToken, usersController.createAdmin);
+app.post('/users/admin', validateWebToken, validateRoleAdmin, usersController.createAdmin);
 app.post('/login', loginController.logIn);
 app.post('/recipes', validateWebToken, recipeController.create);
 
